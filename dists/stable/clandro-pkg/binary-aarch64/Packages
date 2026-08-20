@@ -27,6 +27,34 @@ SHA256: 8463338618d26e1ffe783df33378599d569e9a927fca8feccd0f6179ce6ab64b
 Homepage: https://gitea.com/gitea/runner
 Description: Gitea Actions runner
 
+Package: alsa-lib
+Version: 1.2.15.3
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 2300
+Depends: libandroid-sysv-semaphore, libandroid-shmem
+Filename: pool/clandro-pkg/alsa-lib_1.2.15.3_aarch64.deb
+Size: 447720
+MD5sum: 7cec1c1b041b690b6d98f58911587f1d
+SHA1: 2bf9579e8f1bf704e24f98968adbd1ecae637e14
+SHA256: 3f93e68a1e46890c3d1462a099272f7b60ab49e89c1f52fe2eb5de0b3fd0afba
+Homepage: https://www.alsa-project.org
+Description: The Advanced Linux Sound Architecture (ALSA) - library
+
+Package: alsa-plugins
+Version: 1.2.12-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 276
+Depends: libandroid-sysv-semaphore, libandroid-shmem, alsa-lib, pulseaudio
+Filename: pool/clandro-pkg/alsa-plugins_1.2.12-1_aarch64.deb
+Size: 25392
+MD5sum: afd066a5df1c39094675e5ecc24f6601
+SHA1: ada6adba5b44daf62003bee179c6669cd26ab7f1
+SHA256: 85a0c3462baf2ffa6dd5bd07a3ed2b34e8c6d6347b3ee0087f6c834f6b28d31f
+Homepage: https://www.alsa-project.org
+Description: The Advanced Linux Sound Architecture (ALSA) - plugins
+
 Package: aom-tools
 Version: 3.13.3
 Architecture: aarch64
@@ -1414,6 +1442,33 @@ SHA1: e4abd8dc52ef30827f7454e439a63a9c8f99d7b6
 SHA256: 8534226432424c1508fb03e40f3a5e26f1d35cc81f0c5c4e7fa85dfda3a4186b
 Homepage: https://github.com/termux/libandroid-shmem
 Description: Static libraries for libandroid-shmem
+
+Package: libandroid-sysv-semaphore
+Version: 0.1-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 76
+Filename: pool/clandro-pkg/libandroid-sysv-semaphore_0.1-1_aarch64.deb
+Size: 3592
+MD5sum: 3be29be4255b30c726a2c97c9c6e300d
+SHA1: 9b4e4776422c68f1bf1e40143ac827a76c1ff469
+SHA256: 348d8166b4ca65f47a55b130fd11d42bd1b21d0a3e6b2c88406e483efaf40cfc
+Homepage: https://android.googlesource.com/platform/bionic/+/refs/heads/master/libc/bionic/sys_sem.cpp
+Description: A shared library providing System V semaphores
+
+Package: libandroid-sysv-semaphore-static
+Version: 0.1-1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 32
+Depends: libandroid-sysv-semaphore (= 0.1-1)
+Filename: pool/clandro-pkg/libandroid-sysv-semaphore-static_0.1-1_aarch64.deb
+Size: 1696
+MD5sum: aa15caaba970956030485e2ca57430bf
+SHA1: 68a9add87d3b2c55c12d34815e268fe2ea6aa2d9
+SHA256: 0236ef6d21305a5ace65e0c4878b70a17310b07cfdfc9fee2dbed776111e0435
+Homepage: https://android.googlesource.com/platform/bionic/+/refs/heads/master/libc/bionic/sys_sem.cpp
+Description: Static libraries for libandroid-sysv-semaphore
 
 Package: libaom
 Version: 3.13.3
@@ -2871,6 +2926,49 @@ SHA1: 74924df3174a7d0249cdaa333328b452cc930fb2
 SHA256: 73f24515c532d838e3d51568514cc2adca82fdbd221bd724ad96ab2c14bf2522
 Homepage: https://www.lighttpd.net
 Description: Fast webserver with minimal memory footprint
+
+Package: littlecms
+Version: 2.19.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 552
+Breaks: littlecms-dev
+Replaces: littlecms-dev
+Filename: pool/clandro-pkg/littlecms_2.19.1_aarch64.deb
+Size: 144100
+MD5sum: 9f5559c93dc2241c89b6bf4c42cc6c01
+SHA1: 0b0157e2dbd3fc91dcabe355dc00e22c01fd3e19
+SHA256: 7c77d1eb0791c50af27da0cdf240b45b49e1b9bbdaae5c19fb4cd8b38ef2c877
+Homepage: http://www.littlecms.com/
+Description: Color management library
+
+Package: littlecms-static
+Version: 2.19.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 652
+Depends: littlecms (= 2.19.1)
+Filename: pool/clandro-pkg/littlecms-static_2.19.1_aarch64.deb
+Size: 146404
+MD5sum: ce39c640df016bba3abe568e1581ffb5
+SHA1: e591c5c526137fb6ba83101a99dc29a946887c8f
+SHA256: 774b097e2abd187216740c3b85b7b28ae866f996c26b0cfeaa862534036c1e24
+Homepage: http://www.littlecms.com/
+Description: Static libraries for littlecms
+
+Package: littlecms-utils
+Version: 2.19.1
+Architecture: aarch64
+Maintainer: @clandro
+Installed-Size: 180
+Depends: libjpeg-turbo, libtiff, littlecms (= 2.19.1)
+Filename: pool/clandro-pkg/littlecms-utils_2.19.1_aarch64.deb
+Size: 35208
+MD5sum: d9a6bdd5da08ecd9a9c4e57b8ebd9628
+SHA1: 35f6e5b7d2e3aaa08a6fecdb98afee9309ba0f14
+SHA256: 228cd821e5df19c609dc7e39754c50accf15c426e9c17e7002b69c8e5cdc4b58
+Homepage: http://www.littlecms.com/
+Description: Color management utilities
 
 Package: lrzip
 Version: 0.660
